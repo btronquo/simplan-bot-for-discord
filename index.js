@@ -76,7 +76,7 @@ client.on('message', async msg=>{
 
 
     // global message for user
-    let planMsg = `Voici votre **plan de vol généré**\n*Attention: Ce plan de vol est utilisable uniquement à des fin de simulations*\n-----------------\n**Départ:** ${body.fromICAO} (${response.fromName})\n**Arrivée:** ${body.fromICAO} (${response.toName})\n**Altitude de croisière:** ${response.maxAltitude} ft\n**Route:** ${route}\n`
+    let planMsg = `Voici votre **plan de vol généré**\n*Attention: Ce plan de vol est utilisable uniquement à des fin de simulations*\n-----------------\n**Départ:** ${body.fromICAO} (${response.fromName})\n**Arrivée:** ${body.toICAO} (${response.toName})\n**Altitude de croisière:** ${response.maxAltitude} ft\n**Route:** ${route}\n`
     planMsg += `\n\nGénéré via flightplandatabase.com -> https://flightplandatabase.com/plan/${response.id}\nBot par Boris Tronquoy (btrn.fr)`;
 
     return msg.reply(planMsg);
