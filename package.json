@@ -1,0 +1,15 @@
+{
+  "name": "discordbot-simbrief",
+  "version": "1.0.0",
+  "description": "a simple simbrief bot for discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Boris Tronquoy",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "node-fetch": "^2.6.0"
+  }
+}
