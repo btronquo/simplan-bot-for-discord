@@ -31,12 +31,12 @@ client.on('message', async msg=>{
   const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-  if (!args.length && command != "api") {
-		return msg.reply(`Il manque des arguments! Tappez \`!simbrief aide\` pour avoir de l'aide!`);
+  if (!args.length && command != "aide") {
+		return msg.reply(`Il manque des arguments! Tappez \`!simplan aide\` pour avoir de l'aide!`);
   }
 
   if (command == "aide") {
-    return msg.reply(`Ecrivez \`!simbrief plan LFLL LFPT\` en remplacent LFLL par le code OACI de votre aéroport de départ et LFPT par le code OACI de votre aéroport de destination`);
+    return msg.reply(`Ecrivez \`!simplan plan LFLL LFPT\` en remplacent *LFLL* par le code OACI de votre aéroport de départ et *LFPT* par le code OACI de votre aéroport de destination`);
   }
 
   let response;
