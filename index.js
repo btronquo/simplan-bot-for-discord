@@ -16,7 +16,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const urlApi = "https://api.flightplandatabase.com/";
 
-client.login(config.token);
+client.login(process.env.TOKEN);
 
 client.on('ready', () => {
   client.user.setActivity("préparer des plans de vol")
@@ -54,7 +54,7 @@ client.on('message', async msg=>{
     let flightPlanAsk = await fetch("https://api.flightplandatabase.com/auto/generate", {
       method: 'POST',
       body: JSON.stringify(body),
-      headers: {'Content-Type': 'application/json', 'Authorization': 'Basic qU2WMxodOG51NVghySCeTjUbTKqcUu35bFbl13a2'}
+      headers: {'Content-Type': 'application/json', 'Authorization': `Basic ${process.env.API_KEY_FPDATABASE}`}
     })
       .then(res => res.json())
       .then(json => response = json)
