@@ -36,7 +36,7 @@ client.on('message', async msg=>{
   }
 
   if (command == "aide") {
-    return msg.reply(`Ecrivez \`!simplan plan LFLL LFPT\` en remplacent *LFLL* par le code OACI de votre aéroport de départ et *LFPT* par le code OACI de votre aéroport de destination`);
+    return msg.reply(`Ecrivez \`!simplan plan LFLL LFPT\` en remplacant *LFLL* par le code OACI de votre aéroport de départ et *LFPT* par le code OACI de votre aéroport de destination`);
   }
 
   let response;
